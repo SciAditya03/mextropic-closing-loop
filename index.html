@@ -141,15 +141,27 @@ th,td,.rec,figcaption,.pn{font-family:var(--font)}thead th,.fb2 h5{font-family:v
 <p>Wang et al. (2023) used Bayesian optimization to discover stereoselective aluminum catalysts. Measured outcomes were added to the dataset after each of three rounds, refining the model’s subsequent predictions. The mean absolute prediction error fell from 0.36 in round one to 0.10 in round three, while later rounds identified more high-performing catalysts <a href="#r1">[1]</a>. Although this study concerns polymer chemistry rather than biology, it provides a particularly clear quantitative example of prediction, measurement, model updating, and improved subsequent predictions.</p>
 <div class="note"><b>What the evidence establishes</b>Together, these studies demonstrate that experimental feedback can guide future decisions and improve specific discovery outcomes. They do not establish that feedback invariably improves model accuracy or that the same strategy will work equally well across all biological systems. The relevant question is whether the returned measurements improve the predictions, candidate rankings, or experimental efficiency that matter for the intended task.</div></section>
 
-<section id="s7"><h2><span class="n">07</span>Where Mextropic fits into the feedback loop</h2>
-<p><span class="lb co">Company material</span></p>
-<p>Closing the loop requires more than a model that generates candidates. It also requires an experimental system that turns those designs into interpretable measurements and returns the results in a form computational teams can use.</p>
-<p>Mextropic positions its infrastructure around a Design → Build → Test → Learn workflow. According to its public website, customers handle design and learning, while Mextropic supports the build-and-test stages and returns structured, machine-learning-ready biomedical data <a href="#r11">[11]</a>.</p>
-<p>Its publicly listed capabilities span expression, binding kinetics, biophysical developability, cell-based function, and bioprocess. Specific readouts include expression and titer measurements, affinity purification, purity assessment by SEC-HPLC, integrity assessment by CE-SDS, intact-mass analysis by LC-MS, and N-glycan profiling <a href="#r11">[11]</a>.</p>
-<p>For model development, the critical feature is how experimental outcomes are returned. Mextropic states that its data are structured and joinable, with failures returned, limits marked, and covariates exposed. These features address an important challenge in feedback-driven discovery: distinguishing a genuine biological negative from a failed construct, a quality-control issue, or a measurement affected by experimental conditions.</p>
-<p>This positions Mextropic to support the experimental and data-return stages of the loop. However, its public materials do not establish that the company automatically retrains customer models, selects their next experiments, or guarantees improved model performance. Those outcomes depend on how downstream teams integrate and evaluate the returned data.</p>
-<p>The broader point is that experimental infrastructure connects computational predictions with measurable biological evidence. For the feedback loop to deliver value, every result must be traceable to its original design and accompanied by enough context to interpret it correctly.</p>
-<p class="src">Related company blog: <i>AI Can Design the Molecule. But Who Generates the Evidence?</i> — find it through the <a href="https://www.mextropic.com/blog/">Mextropic blog index</a>.</p></section>
+
+<section id="s7">
+  <h2><span class="n">07</span>Where Mextropic fits into the feedback loop</h2>
+
+  <p><span class="lb co">Company material</span></p>
+
+  <p>Closing the loop requires more than an AI model that generates promising candidates. It also requires experimental infrastructure capable of testing those candidates and returning reliable, interpretable measurements to the teams developing the models.</p>
+
+  <p>Mextropic's approach aligns with a Design → Build → Test → Learn workflow. According to its public materials, Mextropic supports the build-and-test stages, while customers use the resulting experimental data within their computational workflows. This connects computational design with physical experiments and the evidence needed to evaluate predictions <a href="#r11">[11]</a>.</p>
+
+  <p>Its publicly described capabilities span protein expression, binding kinetics, biophysical developability, cell-based function, and bioprocessing. Depending on the assay, the resulting measurements can include protein yield, purity, molecular integrity, mass characterization, and glycan profiles. These measurements provide different kinds of evidence about a candidate's properties and suitability for further investigation <a href="#r11">[11]</a>.</p>
+
+  <p>For feedback-driven discovery, generating measurements is only part of the challenge. Experimental results must remain linked to the correct candidate and its original prediction, with relevant assay conditions, quality-control information, and failure outcomes preserved. Distinguishing a genuinely inactive candidate from a failed construct or an unreliable measurement is essential if those results are to inform subsequent modelling decisions.</p>
+
+  <p>This is where structured, traceable experimental data can support the feedback loop. Mextropic's role is to help bridge the gap between computational designs and laboratory evidence by supporting experimental testing and the return of usable data. How that data is incorporated into model updates or subsequent experiment selection depends on the customer's downstream workflow; improved model performance must be demonstrated through appropriate evaluation.</p>
+
+  <p>The broader lesson is that AI-driven discovery depends on more than generating predictions. It depends on connecting those predictions to reliable experimental evidence, preserving the context needed to interpret the results, and using that evidence to make better-informed decisions in the next round of discovery.</p>
+
+  <p class="src">For a related perspective, see Mextropic's blog, <i>AI Can Design the Molecule. But Who Generates the Evidence?</i>, available through the <a href="https://www.mextropic.com/blog/">Mextropic blog</a>.</p>
+</section>
+
 
 <section id="s8"><h2><span class="n">08</span>Why closing the loop does not guarantee improvement</h2>
 <p>Closed-loop machine learning can make experimental discovery more efficient, but it does not eliminate the challenges of modelling biology. The value of feedback depends on the reliability of measurements, the representativeness of the data, and how the model uses the returned results.</p>
